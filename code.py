@@ -4,7 +4,7 @@ from math import radians, sin, cos, sqrt, atan2
 from scipy.spatial import cKDTree
 
 def haversine_distance(lat1, lon1, lat2, lon2):
-    R = 6371  # Earth radius in kilometers
+    R = 6371 
     lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
     dlat = lat2 - lat1
     dlon = lon2 - lon1
