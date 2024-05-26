@@ -6,7 +6,7 @@ from datetime import datetime
 data = pd.read_csv("sample_data.csv")
 
 def haversine(lat1, lon1, lat2, lon2):
-    R = 6371  # Radius of Earth in kilometers
+    R = 6371  
     dlat = np.radians(lat2 - lat1)
     dlon = np.radians(lon2 - lon1)
     a = np.sin(dlat / 2) * np.sin(dlat / 2) + np.cos(np.radians(lat1)) * np.cos(np.radians(lat2)) * np.sin(dlon / 2) * np.sin(dlon / 2)
@@ -14,7 +14,7 @@ def haversine(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
 
-threshold_distance = 10  # Adjust this threshold as needed (in kilometers)
+threshold_distance = 10
 
 data['lat_rad'] = np.radians(data['lat'])
 data['lon_rad'] = np.radians(data['lon'])
